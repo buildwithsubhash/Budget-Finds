@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Budget Finds | Honest picks under budget</title>
+<meta name="description" content="Clothing, tech, skincare and more. Honest, tested picks with no hype. Contains affiliate links.">
+<meta name="theme-color" content="#faf8f5">
+<!-- Open Graph: replace the url and image after you deploy -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Budget Finds">
+<meta property="og:description" content="Honest picks for clothing, tech, skincare and more.">
+<meta property="og:url" content="https://YOURUSER.github.io/YOURREPO/">
+<meta property="og:image" content="https://YOURUSER.github.io/YOURREPO/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6b4a'/%3E%3Ctext x='32' y='45' font-size='34' text-anchor='middle' font-family='Arial' font-weight='700' fill='%231b0a05'%3EB%3C/text%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem("bf_theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#products">Skip to products</a>
+<div class="disclosure" role="note">As an Amazon Associate I earn from qualifying purchases. Some links on this site are affiliate links; I may earn a commission at no extra cost to you.</div>
+<div id="previewBanner" class="preview" hidden>Draft preview. This is not the live catalogue.</div>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Budget Finds home"><span class="mark" aria-hidden="true">B</span>Budget Finds</a>
+    <button id="themeBtn" class="tbtn" type="button" aria-label="Switch to dark theme">Dark</button>
+    <button id="menuBtn" class="menu" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Menu">Menu</button>
+    <nav id="mainNav" aria-label="Main"><a href="#products">Picks</a><a href="#how">How it works</a><a href="#followers">Followers</a><a href="#contact">Contact</a></nav>
+    <a id="browseBtn" class="btn small" href="#products" hidden>Browse picks</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero wrap">
+  <div class="hero-copy">
+    <!-- Drop a square photo named avatar.jpg next to index.html and it replaces this circle automatically -->
+    <div class="avatar" id="avatar" role="img" aria-label="Photo placeholder. Replace with your own photo">BF</div>
+    <h1>Good stuff, fair prices, honest notes.</h1>
+    <p class="lead">I test clothing, gadgets and skincare so you don't waste money. If I wouldn't buy it again, it isn't here.</p>
+    <p><a class="btn" href="#products">See today's picks</a> <button class="btn ghost" id="shareBtn" type="button">Share this page</button></p>
+    <ul class="social" aria-label="Social links">
+      <!-- Replace each href with your real profile link -->
+      <li><a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+      <li><a href="https://youtube.com/@YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="https://x.com/YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="X" title="X"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a></li>
+      <li><a href="https://t.me/YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/></svg></a></li>
+      <li><a href="https://whatsapp.com/channel/YOURCHANNEL" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp channel" title="WhatsApp channel"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/></svg></a></li>
+    </ul>
+    <p id="status" class="sr" role="status"></p>
+  </div>
+  <div class="stack" id="heroStack" aria-label="Featured picks"></div>
+</section>
+
+<section id="products" class="wrap">
+  <h2>Recommended picks</h2>
+  <p class="note">Prices may change. Check the store for the latest price.</p>
+  <div class="filters">
+  <div class="controls">
+    <label class="sr" for="q">Search products</label>
+    <input id="q" type="search" placeholder="Search picks" autocomplete="off">
+    <label class="sr" for="plat">Filter by store</label>
+    <select id="plat"><option value="All">All stores</option></select>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+  </div>
+  <p id="count" class="note" aria-live="polite"></p>
+  <div class="grid" id="grid"><div class="card skel" aria-hidden="true"></div><div class="card skel" aria-hidden="true"></div><div class="card skel" aria-hidden="true"></div><div class="card skel" aria-hidden="true"></div><div class="card skel" aria-hidden="true"></div><div class="card skel" aria-hidden="true"></div></div>
+  <p class="updated" id="updated"></p>
+</section>
+
+<section id="how" class="wrap">
+  <h2>Why trust my picks</h2>
+  <div class="trio">
+    <div class="panel"><h3>I use it first</h3><p>I buy or test most things myself, then tell you what worked and what didn't.</p></div>
+    <div class="panel"><h3>Budget comes first</h3><p>I look for value, not the cheapest price. Sometimes paying a bit more is smarter.</p></div>
+    <div class="panel"><h3>Links are disclosed</h3><p>I earn a small commission if you buy through my links. It never costs you extra and never changes my opinion.</p></div>
+  </div>
+</section>
+
+<section id="followers" class="wrap">
+  <h2>From my followers</h2>
+  <p class="note">Sample content. Replace these with real messages from your followers (with their permission).</p>
+  <div class="trio">
+    <figure class="panel"><blockquote>The jeans pick was right on. Saved me a trip to the mall.</blockquote><figcaption>Sample, Priya, student</figcaption></figure>
+    <figure class="panel"><blockquote>Finally someone who says when a product is only okay.</blockquote><figcaption>Sample, Rahul, Patna</figcaption></figure>
+    <figure class="panel"><blockquote>Bought the serum with the coupon. Great skin, small price.</blockquote><figcaption>Sample, Neha, Delhi</figcaption></figure>
+  </div>
+</section>
+
+<section id="privacy" class="wrap">
+  <h2>Privacy</h2>
+  <p class="note">Placeholder. Replace with your own policy before launch. This site stores no personal data. Store websites you visit through my links, and any analytics tool I add, have their own privacy policies.</p>
+</section>
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <p><strong>Budget Finds</strong>. Contact: <a href="mailto:realsuccessdiary@gmail.com">realsuccessdiary@gmail.com</a></p>
+    <ul class="social">
+      <li><a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+      <li><a href="https://youtube.com/@YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="https://x.com/YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a></li>
+      <li><a href="https://t.me/YOURHANDLE" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/></svg></a></li>
+      <li><a href="https://whatsapp.com/channel/YOURCHANNEL" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp channel"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/></svg></a></li>
+    </ul>
+    <p class="fine"><strong>Affiliate disclosure.</strong> As an Amazon Associate I earn from qualifying purchases. Some links on this site are affiliate links; I may earn a commission at no extra cost to you. Prices may change. Check the store for the latest price.</p>
+    <p class="fine"><a href="#privacy">Privacy</a>. &copy; <span id="year"></span> Budget Finds.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

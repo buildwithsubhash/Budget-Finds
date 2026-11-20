@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#faf8f5">
+<title>Admin | Budget Finds</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main class="wrap">
+  <h1>Budget Finds admin</h1>
+  <p class="warn">This page is public, but only someone with your GitHub token can publish changes. Never share your token. Drafts are saved in this browser only.</p>
+  <p><a href="index.html?preview=1" target="_blank" rel="noopener">Preview draft</a> | <a href="index.html">Live site</a> | <span id="draftState" role="status">Loading</span></p>
+
+  <section>
+    <h2 id="formTitle">Add product</h2>
+    <form id="pform" novalidate>
+      <input type="hidden" id="f-id"><input type="hidden" id="f-created">
+      <label>Title (required)<input id="f-title" maxlength="120"></label>
+      <label>Why I recommend it<textarea id="f-desc" rows="3" maxlength="300"></textarea></label>
+      <div class="row">
+        <label>Store<select id="f-platform"><option>Amazon</option><option>Flipkart</option><option>Myntra</option><option>Meesho</option><option>Other</option></select></label>
+        <label>Category<input id="f-category" list="cats" placeholder="Clothing"></label>
+        <datalist id="cats"><option>Clothing</option><option>Tech</option><option>Skincare</option><option>Home &amp; Kitchen</option><option>Fitness</option></datalist>
+      </div>
+      <label>Affiliate link (must start with https://)<input id="f-url" type="url" placeholder="https://"></label>
+      <label>Image URL (optional, an image you have the right to use)<input id="f-image" type="url" placeholder="https://"></label>
+      <div class="row">
+        <label>Price in rupees (optional)<input id="f-price" inputmode="decimal"></label>
+        <label>Original price / MRP (optional)<input id="f-mrp" inputmode="decimal"></label>
+        <label>Badge (optional)<input id="f-badge" maxlength="20" placeholder="Best pick"></label>
+        <label>Coupon code (optional)<input id="f-coupon" maxlength="30"></label>
+      </div>
+      <label class="check"><input id="f-featured" type="checkbox"> Featured (shown larger and first)</label>
+      <p id="formErr" class="err" role="alert"></p>
+      <button class="btn" type="submit" id="saveBtn">Save product</button>
+      <button class="btn ghost" type="button" id="clearBtn">Clear form</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Products (<span id="n">0</span>)</h2>
+    <ul id="list" class="list"></ul>
+  </section>
+
+  <section>
+    <h2>Backup and import</h2>
+    <button class="btn ghost" type="button" id="dlBtn">Download products.json</button>
+    <label class="btn ghost filebtn">Import products.json<input type="file" id="importFile" accept="application/json,.json" hidden></label>
+    <button class="btn ghost" type="button" id="resetBtn">Discard draft, reload live list</button>
+    <p id="toolMsg" role="status" class="ok"></p>
+  </section>
+
+  <section>
+    <h2>Publish to live site</h2>
+    <p class="warn">Publishing commits products.json to your GitHub repo. GitHub Pages then updates the site in about a minute.</p>
+    <div class="row">
+      <label>GitHub username<input id="gh-user" autocomplete="off"></label>
+      <label>Repository<input id="gh-repo" autocomplete="off"></label>
+      <label>Branch<input id="gh-branch" value="main" autocomplete="off"></label>
+    </div>
+    <label>Fine-grained token (Contents: Read and write, one repo only)<input id="gh-token" type="password" autocomplete="off"></label>
+    <label class="check"><input id="gh-remember" type="checkbox"> Remember token on this device (only on a device only you use)</label>
+    <button class="btn" type="button" id="pubBtn">Publish to live site</button>
+    <p id="pubMsg" role="status"></p>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
